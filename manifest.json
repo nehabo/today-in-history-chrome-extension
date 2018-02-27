@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "This Day in History",
+  "description": "Displays New York times news articles from a 100 years ago today.",
+  "version": "1",
+  "author": "Neha Bommareddy",
+  "browser_action": {
+    "default_title": "Have a good day"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["jquery-3.3.1.min.js", "newsGenerator.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "permissions": ["activeTab", "<all_urls>"]
+}
